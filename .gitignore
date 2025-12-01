@@ -1,0 +1,77 @@
+# ---------------------------------------
+# OS / Editor
+# ---------------------------------------
+.DS_Store
+*.log
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# ---------------------------------------
+# Python / Backend
+# ---------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Flask cache/temp
+instance/
+*.sqlite3
+
+# ---------------------------------------
+# Node / Frontend
+# ---------------------------------------
+node_modules/
+dist/
+build/
+
+# ---------------------------------------
+# Secret Config
+# ---------------------------------------
+.env
+.env.*
+
+# ---------------------------------------
+# ML / AI — LARGE FILES TO SKIP
+# ---------------------------------------
+# your model weights
+backend/models/*.pth
+backend/models/*.pt
+backend/models/*.h5
+backend/models/*.keras
+backend/models/*.ckpt
+backend/models/*.onnx
+backend/models/*.pb
+
+# training checkpoints
+checkpoints/
+runs/
+logs/
+export/
+
+# ---------------------------------------
+# Heavy assets (NEVER push)
+# ---------------------------------------
+datasets/
+dataset/
+data/
+uploads/
+media/
+tmp/
+temp/
+cache/
+staticfiles/
+
+# ---------------------------------------
+# Misc
+# ---------------------------------------
+*.zip
+*.tar
+*.tar.gz

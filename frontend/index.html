@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TexFusion - AI Textile Tools</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </div>
+
+  <!-- Beautiful Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <div class="logo-text">
+            <h1>TexFusion</h1>
+            <p>AI Textile Innovation</p>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#" class="nav-link active" data-section="home">Home</a>
+          <a href="#" class="nav-link">About</a>
+        </nav>
+        <div class="auth-section">
+          <button id="loginBtn" class="btn btn-outline">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Login</span>
+          </button>
+          <button id="registerBtn" class="btn btn-primary">
+            <i class="fas fa-user-plus"></i>
+            <span>Register</span>
+          </button>
+          <div id="userInfo" class="user-info">
+            <span id="welcomeMsg"></span>
+            <button id="logoutBtn" class="btn btn-secondary">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Logout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Main Content Area -->
+    <main id="mainContent">
+      <!-- Home Section -->
+      <section id="homeSection" class="section active">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <div class="hero-badge">
+                <span>AI-Powered Textile Platform</span>
+              </div>
+              <h2 class="hero-title">
+                <span class="title-line">Welcome to the Future of</span>
+                <span class="title-line highlight">Textile Innovation!</span>
+              </h2>
+              <p class="hero-description">
+                Transform your textile workflow with our AI-powered platform. 
+                Advanced quality inspection, Intelligent pattern recognition, 
+                and Revolutionary design generation at your fingertips!
+              </p>
+              <!-- Get Started Button - Only shows when not logged in -->
+              <div class="hero-actions" id="heroActions">
+                <button id="getStartedBtn" class="btn btn-primary btn-large">
+                  <i class="fas fa-rocket"></i>
+                  <span>Get Started</span>
+                </button>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="floating-card card-1">
+                <i class="fas fa-search"></i>
+                <h4>Quality Inspection</h4>
+                <p>AI-powered defect detection</p>
+              </div>
+              <div class="floating-card card-2">
+                <i class="fas fa-palette"></i>
+                <h4>Design Generation</h4>
+                <p>Create unique patterns</p>
+              </div>
+              <div class="floating-card card-3">
+                <i class="fas fa-shapes"></i>
+                <h4>Pattern Recognition</h4>
+                <p>Smart classification</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Features Selection Section -->
+    <section id="featuresSection" class="section">
+      <div class="container">
+        <div class="features-selection">
+          <div class="section-header">
+            <h2>Choose Your AI Tool</h2>
+            <p>Select from our powerful AI-powered textile tools</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-selector" data-target="quality">
+              <div class="selector-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3>Quality Inspection</h3>
+              <p>AI-powered object detection for flawless textile quality control</p>
+              <button class="btn btn-primary selector-btn">
+                <span>Use Tool</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            
+            <div class="feature-selector" data-target="design">
+              <div class="selector-icon">
+                <i class="fas fa-palette"></i>
+              </div>
+              <h3>Design Generation</h3>
+              <p>Create unique, AI-generated patterns for your textiles</p>
+              <button class="btn btn-primary selector-btn">
+                <span>Use Tool</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+            
+            <div class="feature-selector" data-target="pattern">
+              <div class="selector-icon">
+                <i class="fas fa-shapes"></i>
+              </div>
+              <h3>Pattern Recognition</h3>
+              <p>Intelligent analysis and recognition of textile patterns</p>
+              <button class="btn btn-primary selector-btn">
+                <span>Use Tool</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool Sections with Back Button -->
+    <section id="qualityTool" class="tool-section">
+      <div class="container">
+        <div class="tool-header">
+          <button class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Tools</span>
+          </button>
+          <div class="tool-title">
+            <h2>Quality Inspection</h2>
+            <p>Detect defects and assess textile quality with advanced AI algorithms</p>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-card">
+            <div class="card-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="card-content">
+              <div class="upload-area" id="qualityUpload">
+                <input type="file" id="qualityFile" accept="image/*" hidden>
+                <div class="upload-placeholder">
+                  <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <p>Upload Textile Image</p>
+                  <span class="upload-hint">JPG, PNG, WebP supported</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full" id="inspectBtn">
+                <i class="fas fa-search"></i>
+                <span>Inspect Quality</span>
+              </button>
+              <div class="result-area" id="qualityResult">
+                <h4>Inspection Results</h4>
+                <div class="result-content">
+                  <div class="result-preview">
+                    <img id="qualityPreview" src="" alt="Uploaded textile image">
+                  </div>
+                  <div class="result-details">
+                    <div class="result-item">
+                      <span class="result-label">Prediction:</span>
+                      <span id="qualityPrediction" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label">Confidence:</span>
+                      <span id="qualityConfidence" class="result-value">-</span>
+                    </div>
+                    <div class="top-predictions" id="qualityTop3">
+                      <h5>Top Predictions</h5>
+                      <div class="predictions-list">
+                        <!-- Will be populated by JavaScript -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="designTool" class="tool-section">
+      <div class="container">
+        <div class="tool-header">
+          <button class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Tools</span>
+          </button>
+          <div class="tool-title">
+            <h2>Design Generation</h2>
+            <p>Create unique textile patterns with AI-powered design tools</p>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-card">
+            <div class="card-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="card-content">
+              <div class="form-group">
+                <label for="categorySelect">Design Category</label>
+                <div class="select-wrapper">
+                  <select id="categorySelect" class="form-control">
+                    <option value="abstract">Abstract</option>
+                    <option value="animal_print">Animal Print</option>
+                    <option value="checks">Checks</option>
+                    <option value="floral">Floral</option>
+                    <option value="geometric">Geometric</option>
+                    <option value="houndstooth">Houndstooth</option>
+                    <option value="plaid">Plaid</option>
+                    <option value="plain">Plain</option>
+                    <option value="polka_dots">Polka Dots</option>
+                    <option value="stripes">Stripes</option>
+                    <option value="waves">Waves</option>
+                    <option value="zigzag">Zigzag</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Color Customization</label>
+                <div class="slider-group">
+                  <div class="slider-item">
+                    <div class="slider-header">
+                      <label for="hueSlider">Hue</label>
+                      <span id="hueValue" class="slider-value">0</span>
+                    </div>
+                    <input type="range" id="hueSlider" min="0" max="180" value="0" class="slider hue-slider">
+                  </div>
+                  <div class="slider-item">
+                    <div class="slider-header">
+                      <label for="satSlider">Saturation</label>
+                      <span id="satValue" class="slider-value">1.0</span>
+                    </div>
+                    <input type="range" id="satSlider" min="0.5" max="2.0" step="0.1" value="1.0" class="slider sat-slider">
+                  </div>
+                  <div class="slider-item">
+                    <div class="slider-header">
+                      <label for="valSlider">Brightness</label>
+                      <span id="valValue" class="slider-value">1.0</span>
+                    </div>
+                    <input type="range" id="valSlider" min="0.5" max="2.0" step="0.1" value="1.0" class="slider val-slider">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="motifUpload">Motif Overlay (PNG)</label>
+                <input type="file" id="motifUpload" accept="image/png" class="form-control">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="motifMode">Motif Mode</label>
+                  <div class="select-wrapper">
+                    <select id="motifMode" class="form-control">
+                      <option value="none">No Motif</option>
+                      <option value="single">Single</option>
+                      <option value="spread">Spread / Tiled</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="enhanceMode">Enhancement</label>
+                  <div class="select-wrapper">
+                    <select id="enhanceMode" class="form-control">
+                      <option value="sharpen">Sharpen</option>
+                      <option value="smooth">Smooth</option>
+                      <option value="watercolor">Watercolor</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="slider-header">
+                    <label for="motifScale">Motif Scale</label>
+                    <span id="motifScaleValue" class="slider-value">0.2</span>
+                  </div>
+                  <input type="range" id="motifScale" min="0.1" max="0.5" step="0.05" value="0.2" class="slider">
+                </div>
+                <div class="form-group">
+                  <div class="slider-header">
+                    <label for="motifSpacing">Motif Spacing</label>
+                    <span id="motifSpacingValue" class="slider-value">30</span>
+                  </div>
+                  <input type="range" id="motifSpacing" min="10" max="60" step="5" value="30" class="slider">
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-full" id="generateBtn">
+                <i class="fas fa-magic"></i>
+                <span>Generate Design</span>
+              </button>
+
+              <div class="result-area" id="designResult">
+                <h4>Generated Design</h4>
+                <div class="result-content">
+                  <div class="design-output">
+                    <div id="designPlaceholder" class="design-placeholder">
+                      <div class="placeholder-icon">
+                        <i class="fas fa-sparkles"></i>
+                      </div>
+                      <p>Your AI-generated design will appear here</p>
+                    </div>
+                    <img id="generatedImage" src="" alt="Generated design" class="design-image">
+                  </div>
+                  <button class="btn btn-secondary btn-full" id="downloadBtn" style="display:none;">
+                    <i class="fas fa-download"></i>
+                    <span>Download Design</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patternTool" class="tool-section">
+      <div class="container">
+        <div class="tool-header">
+          <button class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Tools</span>
+          </button>
+          <div class="tool-title">
+            <h2>Pattern Recognition</h2>
+            <p>Identify and classify textile patterns with machine learning</p>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="feature-card">
+            <div class="card-icon">
+              <i class="fas fa-shapes"></i>
+            </div>
+            <div class="card-content">
+              <div class="upload-area" id="patternUpload">
+                <input type="file" id="patternFile" accept="image/*" hidden>
+                <div class="upload-placeholder">
+                  <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <p>Upload Fabric Image</p>
+                  <span class="upload-hint">JPG, PNG, WebP supported</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full" id="recognizeBtn">
+                <i class="fas fa-shapes"></i>
+                <span>Recognize Pattern</span>
+              </button>
+              <div class="result-area" id="patternResult">
+                <h4>Pattern Results</h4>
+                <div class="result-content">
+                  <div class="result-preview">
+                    <img id="patternPreview" src="" alt="Uploaded pattern image">
+                  </div>
+                  <div class="result-details">
+                    <div class="result-item">
+                      <span class="result-label">Pattern:</span>
+                      <span id="patternName" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label">Confidence:</span>
+                      <span id="patternConfidence" class="result-value">-</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Welcome Back</h2>
+        <p>Sign in to your TexFusion account</p>
+        <button class="close" id="closeLogin">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <form id="loginForm" class="modal-form">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="loginUsername" placeholder="Username" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-options">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-large">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Sign In</span>
+        </button>
+        <p class="switch-auth">
+          Don't have an account? <a href="#" id="switchToRegister">Create one here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Join TexFusion</h2>
+        <p>Create your account to get started</p>
+        <button class="close" id="closeRegister">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <form id="registerForm" class="modal-form">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="registerUsername" placeholder="Username" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="registerEmail" placeholder="Email" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="registerPassword" placeholder="Password" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-options">
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-large">
+          <i class="fas fa-user-plus"></i>
+          <span>Create Account</span>
+        </button>
+        <p class="switch-auth">
+          Already have an account? <a href="#" id="switchToLogin">Sign in here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p>Processing your request...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>TexFusion</h3>
+          <p>AI Textile Innovation</p>
+          <p class="footer-description">
+            Revolutionizing textile design with artificial intelligence and machine learning.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TexFusion AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

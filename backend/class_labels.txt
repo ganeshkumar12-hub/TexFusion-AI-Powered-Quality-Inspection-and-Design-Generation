@@ -1,0 +1,7 @@
+vertical
+detect_free
+hole
+horizontal
+lines
+stain
+
